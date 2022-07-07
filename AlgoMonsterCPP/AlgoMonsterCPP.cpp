@@ -1,11 +1,10 @@
 #include "solo.h"
-using namespace std;
 
 int main()
 {   
-    int n;
-    cin >> n;
-    int cache = n;
-    
-    winners(customers, 13, n, cache);
+	int megabytes;
+	cin >> megabytes;
+	cout << "Before promotion: " << megabytes << endl;
+	promotion(&megabytes);
+	cout << "After promotion: " << megabytes << endl;
 }
