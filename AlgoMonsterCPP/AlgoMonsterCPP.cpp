@@ -1,5 +1,6 @@
 #include "solo.h"
 #include "raylib.h"
+
 // Advanced
 #include <vector>	// vector
 #include <limits>	// numeric_limits
@@ -32,7 +33,7 @@ bool feasible(std::vector<int> weights, int max_weight,int d)
 	return req_days <= d;
 }
 
-int min_max_capacity(std::vector<int> weights, int d)
+int min_max_weight(std::vector<int> weights, int d)
 {
 	int min_ptr = *std::max_element(weights.begin(), weights.end());;
 	int max_ptr = std::accumulate(weights.begin(), weights.end(), 0);
@@ -53,7 +54,30 @@ int min_max_capacity(std::vector<int> weights, int d)
 	return boundaryIndex;
 }
 
+template<typename T>
+std::vector<T> get_words()
+{
+	std::string line;
+	std::getline(std::cin, line);
+	std::istringstream ss{ line };
+	std::vector<T> v;
+	std::copy(std::istream_iterator<T>{ss}, istream_iterator<T>{}, std::back_inserter(v));
+	return v;
+
+}
+
+void ignore_line() {
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+}
+
+
+
 int main()
 {
-			
+	std::vector<int> weights = get_words<int>();
+	int d;
+	std:cin >> d;
+	ignore_line();
+	int res = min_max_weight(weights, d);
+	std::cout << res << '\n';
 }
