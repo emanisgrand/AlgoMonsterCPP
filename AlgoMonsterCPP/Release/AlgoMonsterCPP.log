@@ -1,8 +1,1 @@
-﻿  AlgoMonsterCPP.cpp
-C:\Users\tio\Desktop\AlgoMonsterDaily\AlgoMonsterCPP\AlgoMonsterCPP\AlgoMonsterCPP.cpp(79,5): warning C4102: 'std': unreferenced label
-  Generating code
-  0 of 246 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  AlgoMonsterCPP.vcxproj -> C:\Users\tio\Desktop\AlgoMonsterDaily\AlgoMonsterCPP\Release\AlgoMonsterCPP.exe
+﻿  AlgoMonsterCPP.vcxproj -> C:\Users\tio\Desktop\AlgoMonsterDaily\AlgoMonsterCPP\Release\AlgoMonsterCPP.exe

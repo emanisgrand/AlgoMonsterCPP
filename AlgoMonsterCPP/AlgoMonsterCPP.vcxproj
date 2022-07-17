@@ -131,9 +131,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AlgoMonsterCPP.cpp" />
+    <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="solo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinarySearch.h" />
     <ClInclude Include="solo.h" />
   </ItemGroup>
   <ItemGroup>
