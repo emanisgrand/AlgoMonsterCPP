@@ -1,1 +1,9 @@
-﻿  AlgoMonsterCPP.vcxproj -> C:\Users\tio\Desktop\AlgoMonsterDaily\AlgoMonsterCPP\Release\AlgoMonsterCPP.exe
+﻿  AlgoMonsterCPP.cpp
+C:\Users\tio\Desktop\AlgoMonsterDaily\AlgoMonsterCPP\AlgoMonsterCPP\AlgoMonsterCPP.cpp(54,12): warning C4018: '<': signed/unsigned mismatch
+C:\Users\tio\Desktop\AlgoMonsterDaily\AlgoMonsterCPP\AlgoMonsterCPP\AlgoMonsterCPP.cpp(58,12): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  172 of 308 functions (55.8%) were compiled, the rest were copied from previous compilation.
+    126 functions were new in current compilation
+    21 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  AlgoMonsterCPP.vcxproj -> C:\Users\tio\Desktop\AlgoMonsterDaily\AlgoMonsterCPP\Release\AlgoMonsterCPP.exe

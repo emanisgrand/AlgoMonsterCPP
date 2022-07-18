@@ -6,6 +6,7 @@
 #include <sstream>		// istringstream
 #include <string>		// getline, string
 #include <vector>		// vectors
+#include <unordered_set> // unordered set
 
 #include "BinarySearch.h" // min_max_weight
 
@@ -45,15 +46,41 @@ void bfs(std::vector<std::vector<int>>& grid, Coordinate root, int num_rows, int
 	}
 }
 
+void dfs(std::vector<std::vector<int>>&grid, std::vector<std::vector<bool>> &vec, int i, int j)
+{
+	vec[i][j] = true;
+
+	//Check for adjacent unvisited lands
+	if (i + 1 < grid.size() && grid[i + 1][j] == '1' && vec[i + 1][j] == false)
+	{
+		dfs(grid, vec, i + 1, j);
+	}
+	if (j + 1 < grid[0].size() && grid[i][j + 1] == '1' && vec[i][j + 1] == false)
+	{
+		dfs(grid, vec, i, j + 1);
+	}
+	if (i - 1 >= 0 && grid[i - 1][j] == '1' && vec[i - 1][j] == false)
+	{
+		dfs(grid, vec, i - 1, j);
+	}
+	if (j - 1 >= 0 && grid[i][j - 1] == '1' && vec[i][j - 1] == false)
+	{
+		dfs(grid, vec, i, j - 1);
+	}
+}
+
 int count_number_of_islands(std::vector<std::vector<int>> grid) {
 	int num_rows = grid.size();
 	int num_cols = grid[0].size();
 	int count = 0;
+
+	std::vector<std::vector<bool>> vec(grid.size(), std::vector<bool>(grid[0].size(), false));
 	// bfs starting from each unvisited land cell
 	for (int r = 0; r < num_rows; r++) {
 		for (int c = 0; c < num_cols; c++) {
 			if (grid[r][c] == 0) continue;
-			bfs(grid, Coordinate(r, c), num_rows, num_cols);
+
+			dfs(grid, vec, r, c);
 			// bfs would find 1 connected island, increment count
 			count++;
 		}
